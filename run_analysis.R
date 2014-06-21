@@ -59,11 +59,13 @@ getColumnNames <- function()
 datadir <- "./data"
 #the directory to put the final data sets in
 outputdir <- "./"
+#current working dir
+workingdir <- "./"
 
 #this is the URL of the file to download
 fileURL <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
 #this is the name of the file downloaded
-zipfileName <- paste(datadir,"/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip", sep="")
+zipfileName <- paste(workingdir,"/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip", sep="")
 
 #create the datadir if it doesn't exist
 if(!file.exists(datadir)) {dir.create(datadir)}
@@ -116,7 +118,7 @@ mergedata[["activity.Label"]] <- NULL
 ##4.Appropriately labels the data set with descriptive variable names. 
 ##I did this above when I created the column names
 #write out the data
-write.table(mergedata,file=paste(outputdir, "/HumanActivity.csv", sep=""),sep=",",row.names=FALSE)
+write.table(mergedata,file=paste(outputdir, "/HumanActivity.txt", sep=""),sep=",",row.names=FALSE)
 
 ##5.Creates a second, independent tidy data set with the average of each variable for each activity and each subject. 
 #get all the column names
@@ -127,4 +129,4 @@ sumcols <- allcols[3:length(allcols)]
 sumdata <- summaryBy(list(c(sumcols),c("Activity.Name","subject.ID")), data=mergedata,FUN=mean)
 
 #write out the sumdata to file part2.csv
-write.table(sumdata,file=paste(outputdir, "/HumanActivity_Summarized.csv", sep=""),sep=",",row.names=FALSE)
+write.table(sumdata,file=paste(outputdir, "/HumanActivity_Summarized.txt", sep=""),sep=",",row.names=FALSE)

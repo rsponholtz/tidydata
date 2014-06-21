@@ -1,11 +1,11 @@
 ## Coursera: Getting and Cleaning Data
 ### Codebook
 
-The generated output is saved to the file HumanActivity.csv. This file includes all rows merged from the test and training data included in the activity recognition dataset.
+The generated output is saved to the file HumanActivity.txt. This file includes all rows merged from the test and training data included in the activity recognition dataset.
 
-The data in HumanActivity.csv is comma separated, and can be read using the R statement:
+The data in HumanActivity.txt is comma separated, and can be read using the R statement:
 ```R
-datafile <- read.csv("HumanActivity.csv"")
+datafile <- read.csv("HumanActivity.txt"")
 ```
 
 The data in HumanActivity_Summarized.csv has the same format as HumanActivity.csv, but is summarized by the average of each variable for each activity and each subject. 
@@ -17,7 +17,9 @@ Here are the steps taken on the raw data to obtain the resulting data sets:
   - Extracts only the measurements on the mean and standard deviation for each measurement. Here, we take all of the measurement names (from features.txt), and retain all measurements that have "mean" or "std" in the column name (case insensitive)
   - Uses descriptive activity names to name the activities in the data set - we convert the activity numbers in the data set to the activity names from activity_labels.txt
   - Appropriately labels the data set with descriptive variable names. We use measurement names from features.txt, but convert into valid R names (using make.names) and convert tBody into time.Body, tGravity into time.Gravity, fBody into frequency.Body and fGravity into frequency.Gravity.  This makes the column names somewhat more descriptive.
+  - writes the data out into HumanActivity.txt (as comma separated variable file)
   - Creates a second, independent tidy data set with the average of each variable for each activity and each subject. 
+  - writes the second data set out as HumanActivity_Summarized.txt
 
 ## ID Fields
 These identify the activity and subject of the test.  

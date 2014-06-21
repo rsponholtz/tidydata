@@ -1,6 +1,6 @@
 # `tidydata`  - tidying UCI human activity data
 
-This repository includes the code, data and documentation for the class project in the Coursera course "Getting and Cleaning Data".  The script run_analysis.R is the complete script for downloading, merging, summarizing and writing out the data sets, i.e. to create the data files HumanActivity.csv and HumanActivity_Summarized.csv
+This repository includes the code, data and documentation for the class project in the Coursera course "Getting and Cleaning Data".  The script run_analysis.R is the complete script for downloading, merging, summarizing and writing out the data sets, i.e. to create the data files HumanActivity.txt and HumanActivity_Summarized.txt
 
 The dataset is the Human Activity Recognition Using Smartphones Data Set: <http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones>.  The run_analysis.R script does the following:
 
@@ -16,6 +16,6 @@ Files in this repo:
   - README.md - this file
   - codebook.md - description of the data in the output dataset
   - run_analysis.R - R code that loads data in the UCI dataset, transforms it, and writes it out into two tidy data sets
-  - the data directory, with the produced HumanActivity.csv and HumanActivity_Summarized.csv
+  - the data directory, with the produced HumanActivity.txt and HumanActivity_Summarized.txt
 
 To use this script, place it into a directory and run it.  It will automatically create a data subdirectory, download the data file, and write out the tidy data sets.
