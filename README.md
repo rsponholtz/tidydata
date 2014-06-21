@@ -18,4 +18,4 @@ Files in this repo:
   - run_analysis.R - R code that loads data in the UCI dataset, transforms it, and writes it out into two tidy data sets
   - the data directory, with the produced HumanActivity.txt and HumanActivity_Summarized.txt
 
-To use this script, place it into a directory and run it.  It will automatically create a data subdirectory, download the data file, and write out the tidy data sets.
+To use this script, place it into a directory and run it.  It will automatically create a data subdirectory, download the data file, and write out the tidy data sets.  If the downloaded data file is already in the working directory, the script will just use that without downloading.  The unzipped files will be placed in a data directory.
