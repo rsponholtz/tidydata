@@ -28,7 +28,7 @@ These identify the activity and subject of the test.
 
 
 ##  Activity feature measurement data 
-These identify the measurements for the activity and subject.  These only include the feature fields that include either mean or std in the feature name (case insensitive).
+These identify the measurements for the activity and subject.  These only include the feature fields that include either mean or std in the feature name (case insensitive).  For each of these measures, the value has been divided by it's range, thus leaving a ratio - none of them have any "units".
 * `time.BodyAcc.mean...X` - column 3
 * `time.BodyAcc.mean...Y` - column 4
 * `time.BodyAcc.mean...Z` - column 5
